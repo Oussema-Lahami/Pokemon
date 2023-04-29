@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Pokemon-Angular';
+  childData: boolean = true;
+  handleChildData(hide: boolean) {
+    this.childData = hide;
+  }
+
 }

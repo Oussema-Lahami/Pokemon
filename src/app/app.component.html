@@ -1,2 +1,3 @@
-<app-search></app-search>
-<app-cards-page></app-cards-page>
+<app-first-page (onData)="handleChildData($event)" *ngIf="childData" ></app-first-page>
+<app-search *ngIf="!childData"></app-search>
+<app-cards-page *ngIf="!childData"></app-cards-page>
