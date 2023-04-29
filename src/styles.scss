@@ -3,3 +3,8 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+html{
+    background-image: url('./assets/background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
