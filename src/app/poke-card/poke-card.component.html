@@ -1,20 +1,20 @@
-<div class="bg-white rounded-lg overflow-hidden shadow-md w-72" style="margin: 20px; width: 200px; height: 200px;">
+<div class="bg-white rounded-lg overflow-hidden shadow-md w-72" style="margin: 20px; width: 200px; height: 200px; position: relative; box-shadow: 5px 5px 20px 0 crimson;">
   <div style="display: flex; justify-content: space-between; margin: 8px;">
-    <div style="color: crimson; font-family: 'Pokemon';"><strong>#{{id}}</strong></div>
-    <button class="bg-blue-500 hover:bg-red-700 text-white font-bold py-1 px-2 rounded-full pi pi-eye">
+    <div style="color: crimson; font-family: 'Pokemon'; font-size: x-large;"><strong>#{{id}}</strong></div>
+    <button class="hover::bg-red pi pi-eye" style="width: 20px; height: 20px; background-color: black ; border-radius: 50%; color: white;">
     </button>
   </div>
-    <div class="bg-white p-2">
+  <div class="bg-white p-2">
       <div style="display: flex; justify-content: center;">
-        <img src="{{image()}}" alt="Pikachu" style="width: 30%;">
+        <img src="{{image()}}" alt="Pokemon" style="position: absolute; top: 10%; width: 40%;">
       </div>
-      <h2 class="text-lg font-bold" style="display: flex; justify-content: center; font-family: 'Pokemon';">{{name}}</h2>
+      <h2 class="text-lg font-bold" style="display: flex; justify-content: center; font-family: 'Pokemon'; font-size: xx-large; position: absolute; bottom: 30%; right: 50%; left: 50%; ">{{name}}</h2>
       <div class="mt-2">
-        <ul class="text-white text-l" style="display: flex; justify-content: center; flex-direction: row;">
+        <ul class="text-white text-l" style="display: flex; justify-content: center; flex-direction: row; position: absolute; bottom: 10%; right: 50%; left: 50%; ">
           <li style="color: aqua; margin-right: 20px; font-family: 'PokemonSolid';">Water</li>
           <li style="color: crimson; font-family: 'PokemonSolid';">Fire</li>
         </ul>
       </div>
-    </div>
+  </div>
 </div>
   
