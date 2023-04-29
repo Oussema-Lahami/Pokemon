@@ -1,4 +1,4 @@
 <div class="card-container" style="display: flex; flex-wrap: wrap;" >
-    <app-poke-card *ngFor="let poke of pokemons"></app-poke-card>
+    <app-poke-card *ngFor="let poke of pokemons ; index as i;" [id] = "poke.id" [name] = "poke.name" ></app-poke-card>
 </div>
 
