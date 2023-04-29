@@ -4,15 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { PokeCardComponent } from './poke-card/poke-card.component';
 import { SearchComponent } from './search/search.component';
+import { HttpClientModule } from '@angular/common/http';
+import { CardsPageComponent } from './cards-page/cards-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokeCardComponent,
-    SearchComponent
+    SearchComponent,
+    CardsPageComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
