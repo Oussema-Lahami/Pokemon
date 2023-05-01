@@ -9,6 +9,8 @@ export class PokeCardComponent implements OnInit {
 
   @Input() id: string = "";
   @Input() name: string = "";
+  @Input() types: any[] = [];
+
   img: string = ""
   constructor() { }
 

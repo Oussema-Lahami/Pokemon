@@ -16,6 +16,7 @@ export class FirstPageComponent implements OnInit {
   dive(){
     const hide = false ;
     this.onData.emit(hide);
+    document.getElementById('current-pokemon-container')!.classList.add('slide-out');
   }
 
 }

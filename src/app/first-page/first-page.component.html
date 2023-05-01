@@ -1,34 +1,36 @@
-<div class="container">
-    <div class="square">
-        <span style="--i:0;"></span>
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
+<div id="current-pokemon-container">
+    <div class="container">
+        <div class="square">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+        <div class="square">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
+        <div class="square">
+            <span style="--i:0;"></span>
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+        </div>
     </div>
-    <div class="square">
-        <span style="--i:0;"></span>
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
+    
+    <div style="display: flex; justify-content: center;">
+        <img src="../../assets/pokemon.png" alt="" style="width: 30%; position: absolute; top: 74%; z-index: 10;">
     </div>
-    <div class="square">
-        <span style="--i:0;"></span>
-        <span style="--i:1;"></span>
-        <span style="--i:2;"></span>
-        <span style="--i:3;"></span>
+    <div style="display: flex; justify-content: center;">
+        <img src="../../assets/pokes.png" alt="" style="position: absolute; top: 30%; z-index: 0;">
     </div>
+    
+    <div style="display: flex; justify-content: center;">
+        <button style="z-index: 15; width: 25%; height: 50px; background-color: #76949F; color: #32444b; border-radius: 10px; font-family: pokemon; font-size: xx-large;" (click)="dive()">
+           Start
+        </button>
+    </div>
+      
 </div>
-
-<div style="display: flex; justify-content: center;">
-    <img src="../../assets/pokemon.png" alt="" style="width: 30%; position: absolute; top: 74%; z-index: 10;">
-</div>
-<div style="display: flex; justify-content: center;">
-    <img src="../../assets/pokes.png" alt="" style="position: absolute; top: 30%; z-index: 0;">
-</div>
-
-<div style="display: flex; justify-content: center;">
-    <button style="z-index: 15; width: 25%; height: 50px; background-color: #76949F; color: #32444b; border-radius: 10px; font-family: pokemon; font-size: xx-large;" (click)="dive()">
-       Start
-    </button>
-</div>
-  
