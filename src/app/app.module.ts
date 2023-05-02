@@ -7,6 +7,7 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CardsPageComponent } from './cards-page/cards-page.component';
 import { FirstPageComponent } from './first-page/first-page.component';
+import { FullCardPageComponent } from './full-card-page/full-card-page.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FirstPageComponent } from './first-page/first-page.component';
     PokeCardComponent,
     SearchComponent,
     CardsPageComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    FullCardPageComponent
   ],
   imports: [
     BrowserModule,
