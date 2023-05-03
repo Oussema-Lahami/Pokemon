@@ -12,10 +12,10 @@ export class PokemonService {
   constructor(private http: HttpClient) { }
 
   getPokemons(): Observable<any> {
-    return this.http.get(`${this.apiUrl}?limit=50`).pipe(
+    return this.http.get(`${this.apiUrl}?limit=898`).pipe(
       map((response: any) => {
         const pokemons = [];
-        for (let i = 0; i < 50; i++) {
+        for (let i = 0; i < 898; i++) {
           pokemons.push({
             name: response.results[i].name,
             id: i + 1

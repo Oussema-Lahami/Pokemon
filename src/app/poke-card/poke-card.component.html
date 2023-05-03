@@ -1,16 +1,16 @@
-<div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="margin: 20px; width: 150px; height: 150px; position: relative; box-shadow: 5px 5px 10px  #E2B1B1;">
-    <div style="color: white; font-family: 'Pokemon'; font-size: x-large; z-index: 10; position: absolute; top: 10%; left: 10%;">
+<div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" [ngClass]="{'class1': !hidden, 'class2': hidden}">
+    <div style="color: white; font-family: 'Pokemon'; font-size: x-large; z-index: 10; position: absolute; top: 10%; left: 10%;" *ngIf="!hidden">
       <strong>#{{id}}</strong>
     </div>
 
   <div class="p-2" style="z-index: 10;">
-      <div style="display: flex; justify-content: center;">
+      <div style="display: flex; justify-content: center;" *ngIf="!hidden">
         <img src="{{image()}}" alt="Pokemon" style="position: absolute; top: 10%; width: 40%;">
       </div>
-      <h2 class="text-lg font-bold" style="display: flex; justify-content: center; font-family: 'Pokemon'; font-size: large; position: absolute; bottom: 30%; right: 50%; left: 50%; ">{{name}}</h2>        
+      <h2 class="text-lg font-bold" style="display: flex; justify-content: center; font-family: 'Pokemon'; font-size: large; position: absolute; bottom: 30%; right: 50%; left: 50%; " *ngIf="!hidden">{{name}}</h2>        
       
-      <button style="z-index: 15; width: 50px; height: 25px; background-color: #00bbff; color: #fefefe; border-radius: 10px; font-family: pokemon; font-size: small; position: absolute; top: 75%; left: 35%;">
+      <button style="z-index: 15; width: 50px; height: 25px; background-color: #00bbff; color: #fefefe; border-radius: 10px; font-family: pokemon; font-size: small; position: absolute; top: 75%; left: 35%;" (click)="hide()">
         details
       </button>  
-</div>
-  
+      <app-full-card-page *ngIf="hidden" [id]="this.id" [name]="this.name"></app-full-card-page>
+</div>  

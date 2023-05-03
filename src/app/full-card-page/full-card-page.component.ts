@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -10,7 +10,8 @@ import { Observable } from 'rxjs';
 })
 export class FullCardPageComponent implements OnInit {
   private apiUrl = 'https://pokeapi.co/api/v2/pokemon/';
-  id: number = 25;
+  @Input() id: string = "";
+  @Input() name: string = "";
   stats = [{base_stat:""}];
   abilities = [{ability:{name:""}}];
   weight = {} ;
@@ -22,7 +23,7 @@ export class FullCardPageComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.getPokemonstats(this.id).subscribe(poke => {
+    this.getPokemonstats(+this.id).subscribe(poke => {
       this.stats = poke.stats
       this.abilities = poke.abilities
       this.height = poke.height

@@ -1,23 +1,20 @@
 <div class="card">
     <div class="top">
         <div class="info">
-            <h1 style="color: white; font-family: 'Pokemon'; font-size: xx-large;">Name</h1>
-            <p style="color: white; font-family: 'Pokemon'; font-size: x-large;">{{this.id}}</p>
+            <h1 style="color: white; font-family: 'Pokemon'; font-size: large;">{{this.name}}</h1>
+            <p style="color: white; font-family: 'Pokemon'; font-size: medium;">{{this.id}}</p>
         </div>
-        <button style="width: 100px; height: 30px; background-color: #00bbff; color: #fefefe; border-radius: 10px; font-family: pokemonSolid; font-size: large;">
-            Get Back
-        </button>  
     </div>
     <img class="image" src="{{this.image}}" alt="Image">
     <div class="allInfo">
-        <div class="type" style="display: flex;  flex-direction: row; margin: 25px; justify-content: center;">
-            <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson; margin-right: 20px;" *ngFor="let type of types ; index as i;">
+        <div class="type" style="display: flex;  flex-direction: row; justify-content: center;">
+            <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;" *ngFor="let type of types ; index as i;">
                 <p style="font-family: pokemonSolid; font-size: small;">{{type.type.name}}</p>
             </div>
         </div>
         <p style="color: white; font-family: 'PokemonSolid'; font-size: large;">Height / Weight :</p>
-        <div class="info" style="display: flex;  flex-direction: row; margin: 25px; justify-content: center;">
-            <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson; margin-right: 50px;">
+        <div class="info" style="display: flex;  flex-direction: row; justify-content: center;">
+            <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;">
                 <p style="font-family: pokemonSolid; font-size: small;">{{+this.height / 10}}m</p>
             </div>
             <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;">
@@ -25,16 +22,16 @@
             </div>
         </div>
         <p style="color: white; font-family: 'pokemonSolid'; font-size: large;">Abilities :</p>
-        <div class="abilities" style="display: flex;  flex-direction: row; margin: 25px; justify-content: space-between;">
+        <div class="abilities" style="display: flex;  flex-direction: row; justify-content: space-between;">
             <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 150px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;">
                 <p style="font-family: pokemonSolid; font-size: small;">{{this.abilities[0].ability.name}}</p>
             </div>
             <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 150px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;">
-                <p style="font-family: pokemonSolid; font-size: small;">Lightning Rod</p>
+                <p style="font-family: pokemonSolid; font-size: small;">{{this.abilities[1].ability.name}}</p>
             </div>
         </div>
         <p style="color: white; font-family: 'PokemonSolid'; font-size: large;">Base stats :</p>
-        <div class="stats" style="display: flex;  flex-direction: row; margin: 25px; justify-content: space-between;">
+        <div class="stats" style="display: flex;  flex-direction: row; justify-content: space-between;">
             <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;">
                 <p style="display: flex; flex-wrap: wrap; font-family: pokemonSolid; font-size: small;">{{this.stats[0].base_stat}}</p>
             </div>
@@ -45,7 +42,7 @@
                 <p style="display: flex; flex-wrap: wrap; font-family: pokemonSolid; font-size: small;">{{this.stats[2].base_stat}}</p>
             </div>
         </div>
-        <div class="stats" style="display: flex;  flex-direction: row; margin: 25px; justify-content: space-between;">
+        <div class="stats" style="display: flex;  flex-direction: row; justify-content: space-between;">
             <div class="box bg-white rounded-lg overflow-hidden shadow-md w-72" style="display:flex; justify-content: center; width: 70px; height: 30px; position: relative; box-shadow: 2px 2px 1px  crimson;">
                 <p style="display: flex; flex-wrap: wrap; font-family: pokemonSolid; font-size: small;">{{this.stats[3].base_stat}}</p>
             </div>
