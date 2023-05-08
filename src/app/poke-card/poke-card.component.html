@@ -9,7 +9,10 @@
       </div>
       <h2 class="text-lg font-bold" style="display: flex; justify-content: center; font-family: 'Pokemon'; font-size: large; position: absolute; bottom: 30%; right: 50%; left: 50%; " *ngIf="!hidden">{{name}}</h2>        
       
-      <button style="z-index: 15; width: 50px; height: 25px; background-color: #00bbff; color: #fefefe; border-radius: 10px; font-family: pokemon; font-size: small; position: absolute; top: 75%; left: 35%;" (click)="hide()">
+      <button style="z-index: 15; width: 50px; height: 25px; background-color: #00bbff; color: #fefefe; border-radius: 10px; font-family: pokemon; font-size: small; position: absolute; top: 75%; left: 35%;" (click)="hide()" *ngIf="!hidden">
+        details
+      </button>  
+      <button style="z-index: 15; width: 50px; height: 25px; background-color: #00bbff; color: #fefefe; border-radius: 10px; font-family: pokemon; font-size: small; position: absolute; top: 90%; left: 40%;" (click)="hide()" *ngIf="hidden">
         details
       </button>  
       <app-full-card-page *ngIf="hidden" [id]="this.id" [name]="this.name"></app-full-card-page>
